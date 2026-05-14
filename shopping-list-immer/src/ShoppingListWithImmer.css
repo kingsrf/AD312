@@ -1,0 +1,145 @@
+/* src/ShoppingListWithImmer.css */
+.shopping-container {
+  max-width: 750px;
+  margin: 60px auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #f0eded;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+}
+
+.shopping-container h1 {
+  text-align: center;
+}
+
+.shopping-form {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.shopping-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+.shopping-form button {
+  grid-column: span 2;
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.shopping-form button:hover {
+  background-color: #444;
+}
+
+.error-message {
+  color: #b00020;
+  font-size: 0.95rem;
+}
+
+.empty-message {
+  color: #555;
+}
+
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.shopping-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px;
+  background-color: white;
+  border-radius: 22px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  animation: item-fade-in 0.25s ease-in-out;
+}
+
+.item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-info h2,
+.item-info p {
+  margin: 6px 0;
+  overflow-wrap: anywhere;
+}
+
+.item-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.item-actions button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 999px;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.item-actions button:hover {
+  background-color: #444;
+}
+
+.delete-button {
+  background-color: #8b0000 !important;
+}
+
+.delete-button:hover {
+  background-color: #a40000 !important;
+}
+
+@keyframes item-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (width <= 650px) {
+  .shopping-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .shopping-form {
+    grid-template-columns: 1fr;
+  }
+
+  .shopping-form button {
+    grid-column: span 1;
+  }
+
+  .shopping-card {
+    flex-direction: column;
+  }
+
+  .item-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
