@@ -1,0 +1,239 @@
+.streaming-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.desktop-layout {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgb(109 82 255 / 20%),
+      transparent 35%
+    ),
+    #101119;
+  color: #f7f7fb;
+}
+
+.mobile-layout {
+  padding: 16px;
+  background-color: #090a10;
+  color: #f7f7fb;
+}
+
+.streaming-dashboard {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  margin: 6px 0 0;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+.eyebrow {
+  color: #9c8cff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.viewport-status {
+  padding: 12px 18px;
+  background-color: rgb(255 255 255 / 9%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 16px;
+  text-align: right;
+}
+
+.viewport-status span {
+  display: block;
+  margin-bottom: 4px;
+  color: #b5b5c2;
+  font-size: 0.8rem;
+}
+
+.hero-card {
+  min-height: 330px;
+  display: flex;
+  align-items: flex-end;
+  padding: 36px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(10 11 18 / 95%),
+      rgb(10 11 18 / 25%)
+    ),
+    linear-gradient(135deg, #5244a9, #182b52);
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgb(0 0 0 / 30%);
+}
+
+.hero-content {
+  max-width: 520px;
+}
+
+.content-label {
+  color: #b9afff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-content h2 {
+  margin: 10px 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+}
+
+.hero-content p {
+  color: #d0d0da;
+  line-height: 1.6;
+}
+
+.hero-content button {
+  margin-top: 12px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: #fff;
+  color: #171821;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.viewport-panel,
+.content-section {
+  margin-top: 24px;
+  padding: 24px;
+  background-color: rgb(255 255 255 / 7%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 22px;
+}
+
+.viewport-panel h2,
+.section-heading h2 {
+  margin-top: 0;
+}
+
+.dimension-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.dimension-grid article {
+  padding: 20px;
+  background-color: rgb(255 255 255 / 7%);
+  border-radius: 17px;
+}
+
+.dimension-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: #b5b5c2;
+  font-size: 0.85rem;
+}
+
+.dimension-grid strong {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.viewport-panel > p {
+  margin-bottom: 0;
+  color: #bebeca;
+  line-height: 1.5;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-heading span {
+  color: #aaaab8;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.content-card {
+  overflow: hidden;
+  background-color: rgb(255 255 255 / 7%);
+  border-radius: 18px;
+}
+
+.thumbnail {
+  min-height: 135px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #563fc2, #1d4268);
+  font-size: 1.7rem;
+}
+
+.content-details {
+  padding: 16px;
+}
+
+.content-details h3 {
+  margin: 0 0 6px;
+}
+
+.content-details p {
+  margin: 0;
+  color: #aaaab8;
+}
+
+.mobile-layout .dashboard-header {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.mobile-layout .viewport-status {
+  width: 100%;
+  text-align: left;
+}
+
+.mobile-layout .hero-card {
+  min-height: 410px;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.mobile-layout .content-grid,
+.mobile-layout .dimension-grid {
+  grid-template-columns: 1fr;
+}
+
+.mobile-layout .content-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+}
+
+.mobile-layout .thumbnail {
+  min-height: 105px;
+}
+
+@media (width < 768px) {
+  .viewport-panel,
+  .content-section {
+    padding: 18px;
+  }
+}

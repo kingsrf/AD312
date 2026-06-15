@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background-color: #090a10;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
