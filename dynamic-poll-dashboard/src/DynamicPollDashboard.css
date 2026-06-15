@@ -1,0 +1,244 @@
+.poll-page {
+  min-height: 100vh;
+  padding: 48px 20px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgb(70 112 255 / 17%),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgb(119 77 213 / 14%),
+      transparent 34%
+    ),
+    #edf0f6;
+  color: #252936;
+  font-family: Arial, sans-serif;
+}
+
+.poll-dashboard {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgb(255 255 255 / 88%);
+  border: 1px solid rgb(255 255 255 / 72%);
+  border-radius: 28px;
+  box-shadow: 0 20px 55px rgb(31 37 61 / 14%);
+  backdrop-filter: blur(18px);
+}
+
+.poll-header {
+  padding: 32px 36px 26px;
+  text-align: center;
+  border-bottom: 1px solid #e3e6ee;
+}
+
+.poll-header h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.poll-header p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #646a78;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  color: #5063c9;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+  gap: 24px;
+  padding: 28px;
+}
+
+.voting-panel,
+.chart-panel {
+  padding: 24px;
+  background-color: #fff;
+  border: 1px solid #e5e7ee;
+  border-radius: 21px;
+  box-shadow: 0 5px 18px rgb(35 39 56 / 7%);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-heading h2,
+.chart-panel h2 {
+  margin: 0 0 6px;
+}
+
+.section-heading p,
+.chart-panel > p {
+  margin: 0;
+  color: #707582;
+  line-height: 1.5;
+}
+
+.total-votes {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  background-color: #edf0ff;
+  border-radius: 999px;
+  color: #3f50a7;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.poll-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.poll-option {
+  padding: 17px;
+  background-color: #f6f7fa;
+  border: 1px solid #e6e8ef;
+  border-radius: 17px;
+}
+
+.option-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.option-details h3 {
+  margin: 0 0 4px;
+}
+
+.option-details p {
+  margin: 0;
+  color: #747986;
+  font-size: 0.88rem;
+}
+
+.option-details strong {
+  color: #4557b1;
+}
+
+.percentage-track {
+  height: 8px;
+  margin: 13px 0;
+  overflow: hidden;
+  background-color: #dfe2eb;
+  border-radius: 999px;
+}
+
+.percentage-fill {
+  height: 100%;
+  background-color: #5265ca;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.vote-button,
+.reset-button {
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.vote-button {
+  width: 100%;
+  border: none;
+  background-color: #252b4a;
+  color: #fff;
+}
+
+.vote-button:hover {
+  transform: translateY(-2px);
+  background-color: #353d67;
+}
+
+.reset-button {
+  width: 100%;
+  margin-top: 17px;
+  border: 1px solid #cfd3df;
+  background-color: transparent;
+  color: #4b505d;
+}
+
+.reset-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background-color: #eceef4;
+}
+
+.reset-button:disabled {
+  cursor: not-allowed;
+  opacity: 50%;
+}
+
+.chart-panel {
+  min-width: 0;
+}
+
+.chart-container {
+  position: relative;
+  height: 430px;
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f8f9fb;
+  border-radius: 17px;
+}
+
+@media (width <= 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    height: 370px;
+  }
+}
+
+@media (width <= 600px) {
+  .poll-page {
+    padding: 22px 13px;
+  }
+
+  .poll-header {
+    padding: 27px 20px 22px;
+  }
+
+  .dashboard-grid {
+    padding: 17px;
+  }
+
+  .voting-panel,
+  .chart-panel {
+    padding: 19px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+  }
+
+  .chart-container {
+    height: 320px;
+    padding: 8px;
+  }
+}
