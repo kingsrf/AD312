@@ -1,0 +1,253 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgb(73 101 240 / 18%),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgb(118 79 212 / 14%),
+      transparent 35%
+    ),
+    #eef0f6;
+  color: #20222a;
+  font-family: Arial, sans-serif;
+}
+
+.profile-card,
+.status-card {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgb(255 255 255 / 90%);
+  border: 1px solid rgb(255 255 255 / 72%);
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgb(30 35 60 / 14%);
+  backdrop-filter: blur(18px);
+}
+
+.profile-header {
+  padding: 32px 34px 25px;
+  text-align: center;
+  border-bottom: 1px solid #e4e7ef;
+}
+
+.profile-header h1,
+.status-card h1 {
+  margin: 8px 0 10px;
+}
+
+.profile-header p,
+.status-card p {
+  margin: 0;
+  color: #646875;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  color: #4d5fc7;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding: 30px 34px 34px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label,
+.checkbox-field label {
+  font-weight: 750;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cfd3df;
+  border-radius: 13px;
+  outline: none;
+  background-color: white;
+  color: #20222a;
+  font: inherit;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.form-field textarea {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #586ad3;
+  box-shadow: 0 0 0 4px rgb(88 106 211 / 15%);
+}
+
+.form-field input[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
+  border-color: #bd2445;
+}
+
+.field-help,
+.checkbox-field p {
+  margin: 0;
+  color: #707480;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.field-error,
+.server-error {
+  margin: 0;
+  color: #b0183c;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px;
+  background-color: #f4f5f9;
+  border-radius: 14px;
+}
+
+.checkbox-field input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #5365cc;
+}
+
+.form-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 48px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.primary-button {
+  border: none;
+  background-color: #252b4a;
+  color: white;
+}
+
+.secondary-button {
+  border: 1px solid #cfd3df;
+  background-color: transparent;
+  color: #444955;
+}
+
+.primary-button:hover:not(:disabled),
+.secondary-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.primary-button:hover:not(:disabled) {
+  background-color: #343b63;
+}
+
+.secondary-button:hover:not(:disabled) {
+  background-color: #eceef5;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  cursor: not-allowed;
+  opacity: 55%;
+}
+
+.refresh-message,
+.form-status {
+  margin: 0;
+  color: #666b76;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.success-message {
+  margin: 0;
+  padding: 12px;
+  color: #176136;
+  font-weight: 750;
+  text-align: center;
+  background-color: #e5f7ec;
+  border-radius: 12px;
+}
+
+.server-error {
+  padding: 12px;
+  background-color: #fdebef;
+  border-radius: 12px;
+}
+
+.status-card {
+  padding: 42px 30px;
+  text-align: center;
+}
+
+.error-card {
+  border: 1px solid rgb(176 24 60 / 20%);
+}
+
+.loading-spinner {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 18px;
+  border: 4px solid #d9ddea;
+  border-top-color: #5365cc;
+  border-radius: 50%;
+  animation: spinner-rotation 0.8s linear infinite;
+}
+
+@keyframes spinner-rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (width <= 650px) {
+  .profile-page {
+    padding: 24px 14px;
+  }
+
+  .profile-header,
+  .profile-form {
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+
+  .form-actions {
+    grid-template-columns: 1fr;
+  }
+}

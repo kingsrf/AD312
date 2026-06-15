@@ -1,0 +1,9 @@
+{
+  "profile": {
+    "username": "king",
+    "email": "king@example.com",
+    "bio": "Frontend developer building clean and accessible React applications.",
+    "notifications": true
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}
